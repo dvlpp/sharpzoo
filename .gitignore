@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+cpsharp
+.env
+/public/sharp
+/public/files
+/public/tmp
