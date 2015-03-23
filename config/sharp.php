@@ -144,7 +144,8 @@ return [
                         "desc" => [
                             "label" => "Description",
                             "type" => "markdown",
-                            "toolbar" => "BI QUO LP F"
+                            "height" => 400,
+                            "toolbar" => true
                         ],
 
                         "age" => [
