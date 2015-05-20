@@ -2,8 +2,13 @@
 
 return [
     "name" => "SharpZoo",
-    "auth_service" => false,
+//    "auth_service" => false,
 //    "auth_service" => '\App\Sharp\SharpAuthentication',
+
+    "auth_service" => '\Dvlpp\Sharp\Auth\Impl\Config\SharpAuth',
+    "auth_user" => "admin",
+    "auth_pwd" => "test",
+
     "languages" => [
         "fr" => "French",
         "en" => "English"
