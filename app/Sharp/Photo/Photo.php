@@ -9,7 +9,7 @@ class Photo extends Model implements SharpModelWithFiles {
 
     function getSharpFilePathFor($attribute)
     {
-        return public_path("files/photos/".$this->file);
+        return storage_path("app/files/photos/".$this->file);
     }
 
     public function tags()

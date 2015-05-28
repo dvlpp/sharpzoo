@@ -7,7 +7,11 @@ return [
 
     "auth_service" => '\Dvlpp\Sharp\Auth\Impl\Config\SharpAuth',
     "auth_user" => "admin",
-    "auth_pwd" => "test",
+    "auth_pwd" => "admin",
+
+    "upload_storage_base_path" => storage_path("app/files"),
+    "thumbnail_relative_path" => "thumbnails/sharp",
+    "upload_tmp_base_path" => storage_path("app/tmp/sharp"), // Default
 
     "languages" => [
         "fr" => "French",

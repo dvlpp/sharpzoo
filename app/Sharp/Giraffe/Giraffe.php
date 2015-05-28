@@ -34,6 +34,6 @@ class Giraffe extends Model implements SharpModelWithFiles {
 
     function getSharpFilePathFor($attribute)
     {
-        return public_path("files/giraffes/".$this->picture);
+        return storage_path("app/files/giraffes/".$this->picture);
     }
 } 

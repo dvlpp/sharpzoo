@@ -222,7 +222,7 @@ class Repository implements SharpCmsRepository, SharpHasActivateState, SharpHasS
     {
         return new Photo([
             "animal_id" => $instance->id,
-            "animal_type" => 'Quincy\Sharp\Giraffe\Giraffe'
+            "animal_type" => 'App\Sharp\Giraffe\Giraffe'
         ]);
     }
 
@@ -237,8 +237,8 @@ class Repository implements SharpCmsRepository, SharpHasActivateState, SharpHasS
     function updateFileUpload($instance, $attr, $file)
     {
         $destPath = $instance instanceof Photo
-            ? public_path("files/photos")
-            : public_path("files/giraffes");
+            ? storage_path("app/files/photos")
+            : storage_path("app/files/giraffes");
 
         if(starts_with($file, ":DUPL:"))
         {
@@ -247,7 +247,7 @@ class Repository implements SharpCmsRepository, SharpHasActivateState, SharpHasS
         }
         else
         {
-            $file = public_path("tmp/$file");
+            $file = storage_path("app/tmp/sharp/$file");
             $fileName = $this->moveFile($file, $destPath);
         }
 
